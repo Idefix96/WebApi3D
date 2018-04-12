@@ -6,32 +6,39 @@
 		<style>
 			
 		</style>
+
 		<script id="shader-fs" type="x-shader/x-fragment">
-  precision mediump float;
+  			precision mediump float;
 
-  void main(void) {
-    gl_FragColor = vec4(1.0, 1.0, 1.0, 1.0);
-  }
-</script>
+			 void main(void) {
+			    gl_FragColor = vec4(1.0, 1.0, 1.0, 1.0);
+			 }
+		</script>
 
-<script id="shader-vs" type="x-shader/x-vertex">
-  attribute vec3 aVertexPosition;
+		<script id="shader-vs" type="x-shader/x-vertex">
+		  attribute vec3 aVertexPosition;
 
-  void main(void) {
-    gl_Position = vec4(aVertexPosition, 1.0);
-  }
-</script>
-		<script src="js/Buffer.js"></script>
-		<script src="js/BufferDataManager.js"></script>
-		<script src="js/Mesh.js"></script>
-		<script src="js/Vector.js"></script>
-		<script src="js/Shader.js"></script>
+		  uniform mat4 gScaling;
+		  uniform mat4 gRotation;
+		  uniform mat4 gTranslation;
+
+		  void main(void) {
+		    gl_Position = gScaling*gTranslation*gRotation*vec4(aVertexPosition, 1.0);
+		  }
+		</script>
+		<script src="vendor/glmatrix/dist/gl-matrix.js"></script>
+		<script src="js/Buffer/Buffer.js"></script>
+		<script src="js/GraphicsData/VertexArrayObject.js"></script>
+		<script src="js/GraphicsData/VertexDataManager.js"></script>
+		<script src="js/Mesh3D/Mesh.js"></script>
+		<script src="js/Math/Vector.js"></script>
+		<script src="js/Shader/Shader.js"></script>
 	</head>
 	<body>
 		<canvas id="canvas" width="500" height="500">
 			
 		</canvas>	
-<button id="test">Test</button>
-		<script src="js/webgl.js"></script>
+			<button id="test">Test</button>
+		<script src="js/main.js"></script>
 	</body>
 </html>

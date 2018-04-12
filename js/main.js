@@ -2,7 +2,7 @@ var gl;
 var canvas;
 
 canvas = document.getElementById('canvas');
-gl = canvas.getContext('webgl');
+gl = canvas.getContext('webgl2');
 try {
   	    gl.viewportWidth = canvas.width;
      	gl.viewportHeight = canvas.height;
