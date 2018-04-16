@@ -4,6 +4,42 @@
 		"selected_items":
 		[
 			[
+				"pers",
+				"perspectiveMatrix"
+			],
+			[
+				"rota",
+				"rotationMatrix"
+			],
+			[
+				"trans",
+				"translationMatrix"
+			],
+			[
+				"tra",
+				"translationMatrix"
+			],
+			[
+				"scal",
+				"scalingMatrix"
+			],
+			[
+				"sca",
+				"scalingMatrix"
+			],
+			[
+				"d",
+				"data"
+			],
+			[
+				"i",
+				"index"
+			],
+			[
+				"color",
+				"colorData"
+			],
+			[
 				"index",
 				"indexData"
 			],
@@ -19,7 +55,16 @@
 			"file": "index.html",
 			"settings":
 			{
-				"buffer_size": 1123,
+				"buffer_size": 4366,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "js/Texture/Texture.js",
+			"settings":
+			{
+				"buffer_size": 709,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -28,25 +73,7 @@
 			"file": "js/main.js",
 			"settings":
 			{
-				"buffer_size": 649,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "js/Buffer/Buffer.js",
-			"settings":
-			{
-				"buffer_size": 171,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "js/GraphicsData/VertexArrayObject.js",
-			"settings":
-			{
-				"buffer_size": 397,
+				"buffer_size": 2059,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -55,7 +82,7 @@
 			"file": "js/GraphicsData/VertexDataManager.js",
 			"settings":
 			{
-				"buffer_size": 962,
+				"buffer_size": 3486,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -64,9 +91,49 @@
 			"file": "js/Mesh3D/Mesh.js",
 			"settings":
 			{
-				"buffer_size": 794,
+				"buffer_size": 3026,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "js/Material/Material.js",
+			"settings":
+			{
+				"buffer_size": 520,
+				"encoding": "UTF-8",
+				"line_ending": "Windows",
+				"name": "class Material {"
+			}
+		},
+		{
+			"contents": "class Camera \n{\n\n\tconstructor() {\n\t\tthis.fovy = 45.0;\n\t\tthis.aspect = 500.0 / 500.0;\n\t\tthis.zNear = 0.001;\n\t\tthis.zFar = 1000.0;\n\t\tthis.perspectiveMatrix = mat4.create();\n\t\tmat4.perspective(this.perspectiveMatrix, this.fovy, this.aspect, this.zNear, this.zFar);\n\t\tthis.position = vec3.fromValues(0.0, 0.0, 1.0);\n\t\tthis.center = vec3.fromValues(0.0, 0.0, 0.0);\n\t\tthis.lookDir = this.center - this.position;\n\t\tthis.forward = this.lookDir;\n\t\tthis.up = vec3.fromValues(0.0, 1.0, 0.0);\n\t\tthis.worldToCameraMatrix = mat4.create();\n\t\tmat4.lookAt(this.worldToCameraMatrix, this.position, this.center, this.up);\n\t\tthis.xAxis = vec3.fromValues(1.0, 0.0, 0.0);\n\t\tthis.rotationMatrix = mat4.create();\n\t}\n\n\tmove(delta) {\n\t\tvec3.multiply(this.position, vec3.fromValues(delta, delta, delta), this.forward);\n\t\tvec3.multiply(this.center, vec3.fromValues(delta, delta, delta), this.forward);\n\t\tvec3.normalize(this.forward, this.center - this.position);\n\t\tmat4.lookAt(this.worldToCamera, this.position, this.center, this.up);\n\t}\n\n}",
+			"file": "js/Camera/Camera.js",
+			"file_size": 1040,
+			"file_write_time": 131682424344257011,
+			"settings":
+			{
+				"buffer_size": 1012,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "js/Scene/Light/AmbientLight.js",
+			"settings":
+			{
+				"buffer_size": 115,
+				"encoding": "UTF-8",
+				"line_ending": "Windows",
+				"name": "class AmbientLight"
+			}
+		},
+		{
+			"file": "js/Scene/Light/DirectionalLight.js",
+			"settings":
+			{
+				"buffer_size": 171,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
 			}
 		}
 	],
@@ -114,15 +181,14 @@
 	},
 	"expanded_folders":
 	[
-		"/C/Users/Florian/Desktop/Web/project/project",
-		"/C/Users/Florian/Desktop/Web/project/project/js",
-		"/C/Users/Florian/Desktop/Web/project/project/js/Buffer",
-		"/C/Users/Florian/Desktop/Web/project/project/js/GraphicsData",
-		"/C/Users/Florian/Desktop/Web/project/project/js/Math",
-		"/C/Users/Florian/Desktop/Web/project/project/js/Mesh3D"
+		"/C/Users/Florian/Desktop/Web/project/project"
 	],
 	"file_history":
 	[
+		"/C/Users/Florian/Desktop/Web/project/project/js/Mesh3D/Mesh.js",
+		"/C/Users/Florian/Desktop/Web/project/project/js/Buffer/Buffer.js",
+		"/C/Users/Florian/Desktop/Web/project/project/js/GraphicsData/VertexArrayObject.js",
+		"/C/Users/Florian/Desktop/Web/project/project/js/GraphicsData/VertexDataManager.js",
 		"/C/Users/Florian/Desktop/Web/project/project/vendor/glmatrix/src/gl-matrix/mat4.js",
 		"/C/Users/Florian/Desktop/Web/project/project/vendor/toji-gl-matrix-v2.4.0-20-gc67df41/toji-gl-matrix-c67df41/src/gl-matrix.js",
 		"/C/Users/Florian/Desktop/Web/project/project/js/webgl.js",
@@ -135,7 +201,7 @@
 	],
 	"find":
 	{
-		"height": 0.0
+		"height": 35.0
 	},
 	"find_in_files":
 	{
@@ -149,6 +215,9 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"tangent",
+			"normal",
+			"1.0"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -156,6 +225,9 @@
 		"regex": false,
 		"replace_history":
 		[
+			"bitangent",
+			"tangent",
+			"0.0"
 		],
 		"reverse": false,
 		"show_context": true,
@@ -166,7 +238,7 @@
 	"groups":
 	[
 		{
-			"selected": 4,
+			"selected": 1,
 			"sheets":
 			[
 				{
@@ -175,78 +247,46 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1123,
+						"buffer_size": 4366,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								290,
-								290
+								508,
+								508
 							]
 						],
 						"settings":
 						{
 							"glslvalidator_configured": true,
 							"glslvalidator_enabled": 1,
-							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"syntax": "Packages/OpenGL Shading Language (GLSL)/GLSL.sublime-syntax",
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 893.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 4,
+					"stack_index": 3,
 					"type": "text"
 				},
 				{
 					"buffer": 1,
-					"file": "js/main.js",
+					"file": "js/Texture/Texture.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 649,
+						"buffer_size": 709,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								326,
-								326
-							]
-						],
-						"settings":
-						{
-							"glslvalidator_configured": true,
-							"glslvalidator_enabled": 1,
-							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 5,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "js/Buffer/Buffer.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 171,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								63,
-								63
+								583,
+								583
 							]
 						],
 						"settings":
@@ -259,28 +299,123 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 0,
 					"type": "text"
 				},
 				{
-					"buffer": 3,
-					"file": "js/GraphicsData/VertexArrayObject.js",
+					"buffer": 2,
+					"file": "js/main.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 397,
+						"buffer_size": 2059,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								392,
-								392
+								860,
+								860
 							]
 						],
 						"settings":
 						{
+							"glslvalidator_configured": true,
+							"glslvalidator_enabled": 1,
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 729.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "js/GraphicsData/VertexDataManager.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3486,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								148,
+								148
+							]
+						],
+						"settings":
+						{
+							"glslvalidator_configured": true,
+							"glslvalidator_enabled": 1,
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 1296.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "js/Mesh3D/Mesh.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3026,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2131,
+								2131
+							]
+						],
+						"settings":
+						{
+							"glslvalidator_configured": true,
+							"glslvalidator_enabled": 1,
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "js/Material/Material.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 520,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								258,
+								258
+							]
+						],
+						"settings":
+						{
+							"auto_name": "class Material {",
 							"glslvalidator_configured": true,
 							"glslvalidator_enabled": 1,
 							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax"
@@ -293,65 +428,94 @@
 					"type": "text"
 				},
 				{
-					"buffer": 4,
-					"file": "js/GraphicsData/VertexDataManager.js",
+					"buffer": 6,
+					"file": "js/Camera/Camera.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 962,
+						"buffer_size": 1012,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								957,
-								957
+								33,
+								33
 							]
 						],
 						"settings":
 						{
 							"glslvalidator_configured": true,
 							"glslvalidator_enabled": 1,
-							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 405.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "js/Mesh3D/Mesh.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 794,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								725,
-								725
-							]
-						],
-						"settings":
-						{
-							"glslvalidator_configured": true,
-							"glslvalidator_enabled": 1,
-							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
-							"translate_tabs_to_spaces": false
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 3,
+					"stack_index": 7,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "js/Scene/Light/AmbientLight.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 115,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								115,
+								115
+							]
+						],
+						"settings":
+						{
+							"auto_name": "class AmbientLight",
+							"glslvalidator_configured": true,
+							"glslvalidator_enabled": 1,
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "js/Scene/Light/DirectionalLight.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 171,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								171,
+								171
+							]
+						],
+						"settings":
+						{
+							"glslvalidator_configured": true,
+							"glslvalidator_enabled": 1,
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 8,
 					"type": "text"
 				}
 			]
@@ -359,11 +523,11 @@
 	],
 	"incremental_find":
 	{
-		"height": 0.0
+		"height": 35.0
 	},
 	"input":
 	{
-		"height": 35.0
+		"height": 47.0
 	},
 	"layout":
 	{
@@ -396,7 +560,7 @@
 	"project": "web.sublime-project",
 	"replace":
 	{
-		"height": 0.0
+		"height": 66.0
 	},
 	"save_all_on_build": true,
 	"select_file":
