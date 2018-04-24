@@ -2,9 +2,13 @@
   var canvas;
 
   camera = new Camera();
+
   ambient = new AmbientLight();
   directional = new DirectionalLight();
+  document.body.style.height = "100%";
   canvas = document.getElementById('canvas');
+
+cameraController = new CameraController();
   gl = canvas.getContext('webgl2');
   try {
     	    gl.viewportWidth = canvas.width;
@@ -18,9 +22,9 @@
 
   var mesh = new Mesh();
   var vertices = [
-         0.0,  1.0,  0.0,
-        -1.0, -1.0,  0.0,
-         1.0, -1.0,  0.0
+         0.0,  1.0,  -10.0,
+        -1.0, -1.0,  -10.0,
+         1.0, -1.0,  -10.0
   ];
   var color = [
          1.0, 0.0,  0.0, 1.0,
@@ -28,8 +32,8 @@
          0.0, 0.0,  1.0, 1.0,
   ];
   var uv =  [
-         1.0, 0.0,  0.0, 1.0,
-         1.0, 1.0,
+         0.5, 1.0,  0.0, 0.0,
+         1.0, 0.0,
   ];
   mesh.setPositionData(vertices);
   mesh.setColorData(color);
@@ -55,6 +59,10 @@
     gl.uniform3fv(gl.getUniformLocation(shaderProgram.id, "DirectionalDirection"),  directional.direction);
     
     mesh.draw(shaderProgram.id);
+    
+  //  if (cameraController.move()){
+  //      camera.rotate(vec3.fromValues(0.05,0,0));
+  //  };
     requestAnimationFrame(MainRenderLoop);
   }
 
