@@ -44,25 +44,21 @@
   shaderProgram.load();
 
   cameraController = new CameraController(camera, shaderProgram.id);
+
   function MainRenderLoop() {
     gl.clearColor(0.3, 0.3, 0.3, 1.0);
     gl.clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT);
 
     gl.useProgram(shaderProgram.id);
-   // gl.uniformMatrix4fv(gl.getUniformLocation(shaderProgram.id, "gPerspective"), gl.FALSE, camera.perspectiveMatrix);
-   // gl.uniformMatrix4fv(gl.getUniformLocation(shaderProgram.id, "gWorldToCamera"), gl.FALSE, camera.worldToCameraMatrix);
-   // gl.uniform3fv(gl.getUniformLocation(shaderProgram.id, "cameraPosition"),  camera.position);
     gl.uniform4fv(gl.getUniformLocation(shaderProgram.id, "AmbientColor"),  ambient.color);
     gl.uniform1f(gl.getUniformLocation(shaderProgram.id, "AmbientIntensity"), ambient.intensity);
     gl.uniform4fv(gl.getUniformLocation(shaderProgram.id, "DirectionalColor"),  directional.color);
     gl.uniform1f(gl.getUniformLocation(shaderProgram.id, "DirectionalIntensity"), directional.intensity);
     gl.uniform3fv(gl.getUniformLocation(shaderProgram.id, "DirectionalDirection"),  directional.direction);
-    cameraController.action();
+    
+    cameraController.update();
     mesh.draw(shaderProgram.id);
     
-  //  if (cameraController.move()){
-  //      camera.rotate(vec3.fromValues(0.05,0,0));
-  //  };
     requestAnimationFrame(MainRenderLoop);
   }
 

@@ -39,9 +39,12 @@ class CameraController
 
 	mouseDown(evt) {
 		var button = evt.which;
+
 		switch(button){
 			case 1:
 				this.leftMouseDown = true;
+				this.mousePositionLastFrameX = evt.clientX;
+				this.mousePositionLastFrameY = evt.clientY;
 				break;
 			case 2: 
 				this.rightMouseDown = true;	
@@ -63,18 +66,32 @@ class CameraController
 
 	mouseMove(evt) {
 		this.mouseMoving = true;
-		this.clientX = evt.clientX;
+		this.mousePositionX = evt.clientX;
+		this.mousePositionY = evt.clientY;
 	}
 
 
-	action() {
+	update() {
 		if (this.moveForward)
 			camera.move(0.1);
 		if (this.moveBackward)
 			camera.move(-0.1);
 
+		if (this.mousePositionX == this.mousePositionLastFrameX 
+				&& this.mousePositionY == this.mousePositionLastFrameY)
+		{
+			this.mouseMoving = false;
+		}
+
 		if (this.mouseMoving && this.leftMouseDown)
-			console.log(this.clientX);		
+		{
+			var rotation = vec3.fromValues((this.mousePositionY - this.mousePositionLastFrameY)/100, 
+											(this.mousePositionLastFrameX - this.mousePositionX)/100, 0.0);
+			camera.rotate(rotation);
+		}
+
+		this.mousePositionLastFrameX = this.mousePositionX;
+		this.mousePositionLastFrameY = this.mousePositionY;
 
 		gl.useProgram(this.shader);
 	    gl.uniformMatrix4fv(gl.getUniformLocation(this.shader, "gPerspective"), gl.FALSE, this.camera.perspectiveMatrix);
