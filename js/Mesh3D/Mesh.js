@@ -39,7 +39,7 @@ class Mesh {
 		this.dataManager.setVertexTangentData(this.tangentData);
 	}
 
-	setBiangentData(data) {
+	setBitangentData(data) {
 		this.bitangentData = data;
 		this.dataManager.setVertexBitangentData(this.bitangentData);
 	}
@@ -59,7 +59,7 @@ class Mesh {
 		gl.uniform1i(gl.getUniformLocation(shader, "hasColor"), this.hasColor);
 		
 		gl.uniform1i(gl.getUniformLocation(shader, "hasTexture"), this.material.hasTexture);
-		gl.uniform1i(gl.getUniformLocation(shader, "hasNormalMap"), this.material.hasTexture);
+		gl.uniform1i(gl.getUniformLocation(shader, "hasNormalMap"), this.material.hasNormalMap);
 		gl.uniform1i(gl.getUniformLocation(shader, "hasMaterialColor"), this.material.hasColor);
 		gl.uniform1f(gl.getUniformLocation(shader, "shininess"), this.material.shininess);
 		gl.uniform1f(gl.getUniformLocation(shader, "shininessStrength"), this.material.shininessStrength);
@@ -77,11 +77,11 @@ class Mesh {
 		}
 		if (this.material.hasNormalMap) {
 			gl.activeTexture(gl.TEXTURE1);
-			gl.bindTexture(GL_TEXTURE_2D, this.material.normalMap.texture);
+			gl.bindTexture(gl.TEXTURE_2D, this.material.normalMap.texture);
 			gl.uniform1i(gl.getUniformLocation(shader, "normalMap"), 1); 
 		}
 		if (this.indexData)
-			gl.drawElements(GL_TRIANGLES, this.indexData.length, GL_UNSIGNED_INT, 0);
+			gl.drawElements(gl.TRIANGLES, this.indexData.length, gl.UNSIGNED_SHORT, 0);
 		else
 			gl.drawArrays(gl.TRIANGLES, 0, this.positionData.length/3);
 	}

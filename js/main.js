@@ -1,10 +1,10 @@
   var gl;
   var canvas;
-
+  
   camera = new Camera();
 
-  ambient = new AmbientLight();
-  directional = new DirectionalLight();
+  var ambient = new AmbientLight();
+  var directional = new DirectionalLight();
   document.body.style.height = "100%";
   canvas = document.getElementById('canvas');
 
@@ -30,16 +30,29 @@
          0.0, 1.0,  0.0, 1.0,
          0.0, 0.0,  1.0, 1.0,
   ];
+  var normal = [
+         1.0, 0.0,  0.0,
+         0.0, 1.0,  0.0,
+         -1.0, 0.0,  0.0,
+  ];
   var uv =  [
          0.5, 1.0,  0.0, 0.0,
          1.0, 0.0,
   ];
-  mesh.setPositionData(vertices);
-  mesh.setColorData(color);
-  mesh.setUVData(uv);
+  mesh.setPositionData(Rex.geometries[0].data.attributes.position.array);
+ 
+ 
+  //mesh.setColorData(color); 
+  mesh.setNormalData(Rex.geometries[0].data.attributes.normal.array);
+  mesh.setUVData(Rex.geometries[0].data.attributes.uv.array);
+
+  mesh.setIndexData(Rex.geometries[0].data.index.array);
+  
   mesh.scale(vec3.fromValues(0.5, 0.5, 0.5));
-  mesh.translate(vec3.fromValues(0, 0, 0));
+  //mesh.translate(vec3.fromValues(0, 0, 0));
   mesh.material.loadTexture("Rex_D.jpg");
+  mesh.material.loadNormalMap("Rex_N.jpg");
+  mesh.material.shininess = 3.0;
   var shaderProgram = new Shader();
   shaderProgram.load();
 

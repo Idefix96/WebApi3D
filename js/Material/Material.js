@@ -5,11 +5,12 @@ class Material {
 		this.hasNormalMap = false;	
 		this.hasTexture = false;
 		this.hasColor = false;
-		this.shininess = 0;
-		this.shininessStrength = 0;
+		this.shininess = 32.0;
+		this.shininessStrength = 5.1;
 		this.opacity = 1.0;
 		this.diffuseColor = vec4.create();
 		this.texture = new Texture();
+		this.normalMap = new Texture();
 	}
 
 	setDiffuseColor(color) {
@@ -23,7 +24,7 @@ class Material {
 	}
 
 	loadNormalMap(texture) {
-		this.normalMap = texture;
+		this.normalMap.image.src = texture;
 		this.hasNormalMap = true;
 	}
 
