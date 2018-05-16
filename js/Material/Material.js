@@ -5,8 +5,8 @@ class Material {
 		this.hasNormalMap = false;	
 		this.hasTexture = false;
 		this.hasColor = false;
-		this.shininess = 32.0;
-		this.shininessStrength = 5.1;
+		this.shininess = 128.0;
+		this.shininessStrength = 4.0;
 		this.opacity = 1.0;
 		this.diffuseColor = vec4.create();
 		this.texture = new Texture();

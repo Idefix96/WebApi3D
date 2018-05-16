@@ -48,6 +48,20 @@ class VertexDataManager {
 			stride	: 0,
 			offset	: 0,
 		};
+		this.boneIndex = {
+			index 	: 6,
+			size 	: 4,
+			type 	: gl.INT,
+			stride	: 0,
+			offset	: 0,
+		};
+		this.boneWeight = {
+			index 	: 7,
+			size 	: 4,
+			type 	: gl.FLOAT,
+			stride	: 0,
+			offset	: 0,
+		};
 	}
 
 	setVertexPositionData(data){
@@ -129,7 +143,10 @@ class VertexDataManager {
 		this.indexData = new Uint16Array(data);
 		gl.bufferData(gl.ELEMENT_ARRAY_BUFFER, this.indexData, gl.STATIC_DRAW)
 
-		this.calculateTangentsAndBitangents();
+		if (this.hasOwnProperty("uvData"))
+		{
+			this.calculateTangentsAndBitangents();
+		}
 	}
 
 	calculateTangentsAndBitangents(){
@@ -186,7 +203,6 @@ class VertexDataManager {
 				bitangents[this.indexData[i+1]*3] = bitangent[0];
 				bitangents[this.indexData[i+1]*3 + 1] += bitangent[1];
 				bitangents[this.indexData[i+1]*3 + 2] += bitangent[2];
-
 		
 				tangents[this.indexData[i+2]*3] += tangent[0];
 				tangents[this.indexData[i+2]*3 + 1] += tangent[1];

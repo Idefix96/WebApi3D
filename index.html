@@ -4,7 +4,19 @@
 		<meta charset=utf-8>
 		<title>My first three.js app</title>
 		<style>
-			
+			#test
+			{
+			  top: 5px;
+			  left: 5px;
+			  position: absolute;
+			 
+			}
+
+			#canvas
+			{
+				width: 100%;
+				height: 100%;
+			}
 		</style>
 
 		<script id="shader-fs" type="x-shader/x-fragment">
@@ -127,16 +139,40 @@
 		<script src="js/Scene/Light/AmbientLight.js"></script>
 		<script src="js/Scene/Light/DirectionalLight.js"></script>
 		<script src="js/Mesh3D/Mesh.js"></script>
+
+		<script src="js/UI/Slider.js"></script>
 		
 		<script src="js/Shader/Shader.js"></script>
 		<script src="js/Controller/CameraController.js"></script>
+		<script src="js/Controller/AmbientLightController.js"></script>
 		<script src="Rex.json"></script>
+		<script src="Rex_skeleton.json"></script>
 	</head>
 	<body>
-		<canvas id="canvas" width="1920" height="1080">
-			
-		</canvas>	
-			<button id="test">Test</button>
+		<canvas id="canvas" width="1920" height="1080" style="width: 960px; height: 540px;">		
+		</canvas>
+		<div id="ambientLight">	
+			<table>
+			<caption>Ambient Light</caption>
+				<tr>
+					<td><label for="ambient">Intensity</label></td>
+					<td><input type="range" min="1" max="100" value="50" class="slider" id="ambient" /></td>
+					<td id="ambientIntensityOut" width="50"></td>
+				</tr>
+				<tr>
+					<td><label for="ambient">Red Factor</label></td>
+					<td><input type="range" min="1" max="100" value="100" class="slider" id="ambientColorR" /></td>
+				</tr>
+				<tr>
+					<td><label for="ambient">Green Factor</label></td>
+					<td><input type="range" min="1" max="100" value="100" class="slider" id="ambientColorG" /></td>
+				</tr>
+				<tr>
+					<td><label for="ambient">Blue Factor</label></td>
+					<td><input type="range" min="1" max="100" value="100" class="slider" id="ambientColorB" /></td>
+				</tr>
+			</table>
+		</div>
 		<script src="js/main.js"></script>
 	</body>
 </html>
