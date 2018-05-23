@@ -24,7 +24,7 @@ class AmbientLightController {
 		if (this.elementB != null)
 			this.ambientLight.color[2] = this.elementB.value/100.0;
 		if (this.outputIntensity != null)
-			this.outputIntensity.innerHTML = this.elementIntensity.value/100.0;
+			this.outputIntensity.innerHTML = this.elementIntensity.value + "%";
 		gl.useProgram(this.shader);
 		gl.uniform4fv(gl.getUniformLocation(shaderProgram.id, "AmbientColor"),  this.ambientLight.color);
     	gl.uniform1f(gl.getUniformLocation(shaderProgram.id, "AmbientIntensity"), this.ambientLight.intensity);
