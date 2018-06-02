@@ -41,10 +41,14 @@
   var sliderDirectionalColorR = new Slider("directionalColorR");
   var sliderDirectionalColorG = new Slider("directionalColorG");
   var sliderDirectionalColorB = new Slider("directionalColorB");
+  var inputDirectionalX = new InputField("directionalDirectionX");
+  var inputDirectionalY = new InputField("directionalDirectionY");
+  var inputDirectionalZ = new InputField("directionalDirectionZ");
   cameraController = new CameraController(camera, shaderProgram.id);
   directionalLightController = new DirectionalLightController(directional, shaderProgram.id, sliderDirectionalIntensity, 
     sliderDirectionalColorR, sliderDirectionalColorG, sliderDirectionalColorB, document.getElementById("directionalIntensityOut"),
-    document.getElementById("directionalIntensityRed"), document.getElementById("directionalIntensityGreen"), document.getElementById("directionalIntensityBlue"));
+    document.getElementById("directionalIntensityRed"), document.getElementById("directionalIntensityGreen"), document.getElementById("directionalIntensityBlue"),
+     inputDirectionalX, inputDirectionalY, inputDirectionalZ);
  
   ambientLightController = new AmbientLightController(ambient, shaderProgram.id, sliderAmbientIntensity, 
     sliderAmbientColorR, sliderAmbientColorG, sliderAmbientColorB, document.getElementById("ambientIntensityOut"),

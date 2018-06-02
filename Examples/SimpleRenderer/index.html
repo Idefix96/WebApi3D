@@ -141,7 +141,7 @@
 		<script src="../../js/Scene/Light/DirectionalLight.js"></script>
 		<script src="../../js/Mesh3D/Mesh.js"></script>
 		<script src="../../js/UI/Slider.js"></script>
-		
+		<script src="../../js/UI/InputField.js"></script>
 		<script src="../../js/Shader/Shader.js"></script>
 		<script src="../../js/Controller/CameraController.js"></script>
 		<script src="../../js/Controller/AmbientLightController.js"></script>
@@ -151,58 +151,84 @@
 	<body>
 		<canvas id="canvas" width="1920" height="1080" style="width: 1920px; height: 540px;">		
 		</canvas>
-		<div id="ambientLight">	
+		<div id="lights">
+			<div id="ambientLight">	
+				<table>
+				<caption>Ambient Light</caption>
+					<tr>
+						<td><label for="ambient">Intensity</label></td>
+						<td><input type="range" min="1" max="100" value="50" class="slider" id="ambient" /></td>
+						<td id="ambientIntensityOut" width="50"></td>
+					</tr>
+					<tr>
+						<td><label for="ambientColorR">Red Factor</label></td>
+						<td><input type="range" min="1" max="100" value="100" class="slider" id="ambientColorR" /></td>
+						<td id="ambientIntensityRed" width="50"></td>
+					</tr>
+					<tr>
+						<td><label for="ambientColorG">Green Factor</label></td>
+						<td><input type="range" min="1" max="100" value="100" class="slider" id="ambientColorG" /></td>
+						<td id="ambientIntensityGreen" width="50"></td>
+					</tr>
+					<tr>
+						<td><label for="ambientColorB">Blue Factor</label></td>
+						<td><input type="range" min="1" max="100" value="100" class="slider" id="ambientColorB" /></td>
+						<td id="ambientIntensityBlue" width="50"></td>
+					</tr>
+				</table>
+			</div>
+			<div id="directionalLight">	
+				<table>
+				<caption>Directional Light</caption>
+					<tr>
+						<td><label for="directional">Intensity</label></td>
+						<td><input type="range" min="1" max="100" value="50" class="slider" id="directional" /></td>
+						<td id="directionalIntensityOut" width="50"></td>
+					</tr>
+					<tr>
+						<td><label for="directional">Red Factor</label></td>
+						<td><input type="range" min="1" max="100" value="100" class="slider" id="directionalColorR" /></td>
+						<td id="directionalIntensityRed" width="50"></td>
+					</tr>
+					<tr>
+						<td><label for="directionalColorR">Green Factor</label></td>
+						<td><input type="range" min="1" max="100" value="100" class="slider" id="directionalColorG" /></td>
+						<td id="directionalIntensityGreen" width="50"></td>
+					</tr>
+					<tr>
+						<td><label for="directionalColorB">Blue Factor</label></td>
+						<td><input type="range" min="1" max="100" value="100" class="slider" id="directionalColorB" /></td>
+						<td id="directionalIntensityBlue" width="50"></td>
+					</tr>
+					<tr>
+						<td><label for="directionalDirectionX">X Direction</label></td>
+						<td><input type="number" step="0.01"  value="0.5" id="directionalDirectionX" /></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td><label for="directionalDirectionY">Y Direction</label></td>
+						<td><input type="number" step="0.01" value="0.5" id="directionalDirectionY" /></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td><label for="directionalDirectionZ">Z Direction</label></td>
+						<td><input type="number" step="0.01" value="0.5" id="directionalDirectionZ" /></td>
+						<td></td>
+					</tr>
+					
+					
+				</table>
+			</div>
+		</div>	
+		<div id="camera">
 			<table>
-			<caption>Ambient Light</caption>
+				<caption>Camera</caption>
 				<tr>
-					<td><label for="ambient">Intensity</label></td>
-					<td><input type="range" min="1" max="100" value="50" class="slider" id="ambient" /></td>
-					<td id="ambientIntensityOut" width="50"></td>
-				</tr>
-				<tr>
-					<td><label for="ambient">Red Factor</label></td>
-					<td><input type="range" min="1" max="100" value="100" class="slider" id="ambientColorR" /></td>
-					<td id="ambientIntensityRed" width="50"></td>
-				</tr>
-				<tr>
-					<td><label for="ambient">Green Factor</label></td>
-					<td><input type="range" min="1" max="100" value="100" class="slider" id="ambientColorG" /></td>
-					<td id="ambientIntensityGreen" width="50"></td>
-				</tr>
-				<tr>
-					<td><label for="ambient">Blue Factor</label></td>
-					<td><input type="range" min="1" max="100" value="100" class="slider" id="ambientColorB" /></td>
-					<td id="ambientIntensityBlue" width="50"></td>
+					<td></td>
 				</tr>
 			</table>
 		</div>
-		<div id="directionalLight">	
-			<table>
-			<caption>Directional Light</caption>
-				<tr>
-					<td><label for="directional">Intensity</label></td>
-					<td><input type="range" min="1" max="100" value="50" class="slider" id="directional" /></td>
-					<td id="directionalIntensityOut" width="50"></td>
-				</tr>
-				<tr>
-					<td><label for="directional">Red Factor</label></td>
-					<td><input type="range" min="1" max="100" value="100" class="slider" id="directionalColorR" /></td>
-					<td id="directionalIntensityRed" width="50"></td>
-				</tr>
-				<tr>
-					<td><label for="directional">Green Factor</label></td>
-					<td><input type="range" min="1" max="100" value="100" class="slider" id="directionalColorG" /></td>
-					<td id="directionalIntensityGreen" width="50"></td>
-				</tr>
-				<tr>
-					<td><label for="directional">Blue Factor</label></td>
-					<td><input type="range" min="1" max="100" value="100" class="slider" id="directionalColorB" /></td>
-					<td id="directionalIntensityBlue" width="50"></td>
-				</tr>
-			</table>
-		</div>
-
-		 <script src="SimpleRenderer.js"></script>
+		<script src="SimpleRenderer.js"></script>
 		
 	</body>
 </html>
