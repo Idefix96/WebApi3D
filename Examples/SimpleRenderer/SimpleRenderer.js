@@ -21,15 +21,15 @@
 
   var mesh = new Mesh();
  
-  mesh.setPositionData(Rex.geometries[0].data.attributes.position.array);
-  mesh.setNormalData(Rex.geometries[0].data.attributes.normal.array);
-  mesh.setUVData(Rex.geometries[0].data.attributes.uv.array);
-  mesh.setIndexData(Rex.geometries[0].data.index.array);
-  mesh.scale(vec3.fromValues(0.5, 0.5, 0.5));
+  mesh.setPositionData(asteroid.geometries[0].data.attributes.position.array);
+  mesh.setNormalData(asteroid.geometries[0].data.attributes.normal.array);
+ // mesh.setUVData(asteroid.geometries[0].data.attributes.uv.array);
+  mesh.setIndexData(asteroid.geometries[0].data.index.array);
+  mesh.scale(vec3.fromValues(0.25, 0.25, 0.25));
  
-  mesh.material.loadTexture("Rex_D.jpg");
-  mesh.material.loadNormalMap("Rex_N.jpg");
-  mesh.material.shininess = Rex.materials[0].shininess;
+  //mesh.material.loadTexture("Rex_D.jpg");
+  //mesh.material.loadNormalMap("Rex_N.jpg");
+  mesh.material.shininess = asteroid.materials[0].shininess;
   var shaderProgram = new Shader();
   shaderProgram.load();
 
@@ -43,10 +43,12 @@
   var sliderDirectionalColorB = new Slider("directionalColorB");
   cameraController = new CameraController(camera, shaderProgram.id);
   directionalLightController = new DirectionalLightController(directional, shaderProgram.id, sliderDirectionalIntensity, 
-    sliderDirectionalColorR, sliderDirectionalColorG, sliderDirectionalColorB, document.getElementById("directionalIntensityOut"));
+    sliderDirectionalColorR, sliderDirectionalColorG, sliderDirectionalColorB, document.getElementById("directionalIntensityOut"),
+    document.getElementById("directionalIntensityRed"), document.getElementById("directionalIntensityGreen"), document.getElementById("directionalIntensityBlue"));
  
   ambientLightController = new AmbientLightController(ambient, shaderProgram.id, sliderAmbientIntensity, 
-    sliderAmbientColorR, sliderAmbientColorG, sliderAmbientColorB, document.getElementById("ambientIntensityOut"));
+    sliderAmbientColorR, sliderAmbientColorG, sliderAmbientColorB, document.getElementById("ambientIntensityOut"),
+    document.getElementById("ambientIntensityRed"), document.getElementById("ambientIntensityGreen"), document.getElementById("ambientIntensityBlue"));
   var active = false;
   canvas.addEventListener("mouseover", function(){
     active = true;  

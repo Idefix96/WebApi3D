@@ -25,6 +25,12 @@ class DirectionalLightController {
 			this.directionalLight.color[2] = this.elementB.value/100.0;
 		if (this.outputIntensity != null)
 			this.outputIntensity.innerHTML = this.elementIntensity.value + "%";
+		if (this.outputR != null)
+			this.outputR.innerHTML = this.elementR.value + "%";
+		if (this.outputG != null)
+			this.outputG.innerHTML = this.elementG.value + "%";
+		if (this.outputB != null)
+			this.outputB.innerHTML = this.elementB.value + "%";
 		gl.useProgram(this.shader);
 
 	    gl.uniform4fv(gl.getUniformLocation(shaderProgram.id, "DirectionalColor"),  this.directionalLight.color);

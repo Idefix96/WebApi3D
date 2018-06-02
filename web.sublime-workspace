@@ -116,81 +116,27 @@
 	"buffers":
 	[
 		{
-			"file": "index.html",
-			"settings":
-			{
-				"buffer_size": 6961,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "js/Controller/AmbientLightController.js",
-			"settings":
-			{
-				"buffer_size": 1264,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "js/Controller/DirectionalLightController.js",
-			"settings":
-			{
-				"buffer_size": 1435,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "js/Scene/Light/AmbientLight.js",
-			"settings":
-			{
-				"buffer_size": 115,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "skeleton.json",
-			"settings":
-			{
-				"buffer_size": 628273,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "js/Math/Vector.js",
-			"settings":
-			{
-				"buffer_size": 1,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "js/main.js",
-			"settings":
-			{
-				"buffer_size": 4017,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": ".gitignore",
-			"settings":
-			{
-				"buffer_size": 47,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
 			"file": "js/BasicBodies/Box/Box.js",
 			"settings":
 			{
-				"buffer_size": 565,
+				"buffer_size": 1191,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "Examples/SimplePhysics/SimplePhysics.js",
+			"settings":
+			{
+				"buffer_size": 3661,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "Examples/SimpleRenderer/terrain.json",
+			"settings":
+			{
+				"buffer_size": 1385652,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -200,33 +146,50 @@
 			"settings":
 			{
 				"buffer_size": 3102,
-				"encoding": "UTF-8",
 				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "Examples/SimplePhysics/sphere.json",
+			"settings":
+			{
+				"buffer_size": 182883,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
 			}
 		},
 		{
 			"file": "js/BasicBodies/Plane/Plane.js",
 			"settings":
 			{
-				"buffer_size": 16,
+				"buffer_size": 598,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "js/Scene/Camera/Camera.js",
+			"file": "Examples/SimpleRenderer/index.html",
 			"settings":
 			{
-				"buffer_size": 2246,
+				"buffer_size": 6895,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "js/UI/Slider.js",
+			"file": "Examples/SimpleRenderer/asteroid.json",
 			"settings":
 			{
-				"buffer_size": 219,
+				"buffer_size": 5964263,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "Examples/SimpleRenderer/SimpleRenderer.js",
+			"settings":
+			{
+				"buffer_size": 2742,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -277,47 +240,63 @@
 	"expanded_folders":
 	[
 		"/C/Users/Florian/Desktop/Web/project/project",
+		"/C/Users/Florian/Desktop/Web/project/project/Examples",
+		"/C/Users/Florian/Desktop/Web/project/project/Examples/SimplePhysics",
+		"/C/Users/Florian/Desktop/Web/project/project/Examples/SimpleRenderer",
 		"/C/Users/Florian/Desktop/Web/project/project/js",
 		"/C/Users/Florian/Desktop/Web/project/project/js/BasicBodies",
 		"/C/Users/Florian/Desktop/Web/project/project/js/BasicBodies/Box",
 		"/C/Users/Florian/Desktop/Web/project/project/js/BasicBodies/Plane",
-		"/C/Users/Florian/Desktop/Web/project/project/js/Mesh3D",
-		"/C/Users/Florian/Desktop/Web/project/project/js/Physics",
-		"/C/Users/Florian/Desktop/Web/project/project/js/UI"
+		"/C/Users/Florian/Desktop/Web/project/project/js/Mesh3D"
 	],
 	"file_history":
 	[
-		"/C/Users/Florian/Desktop/Web/project/project/js/cannonTest.js",
+		"/C/Users/Florian/Desktop/Web/project/project/Examples/SimplePhysics/index.html",
+		"/C/Users/Florian/AppData/Local/Temp/fz3temp-2/.htaccess",
+		"/C/Users/Florian/AppData/Local/Temp/fz3temp-2/.htpasswd",
+		"/C/Users/Florian/Desktop/Web/project/project/js/UI/Slider.js",
+		"/C/Users/Florian/Desktop/Web/project/project/js/BasicBodies/Box/Box.js",
+		"/C/Users/Florian/Desktop/Web/project/project/js/Scene/Light/AmbientLight.js",
+		"/C/Users/Florian/Desktop/Web/project/project/js/Controller/DirectionalLightController.js",
+		"/C/Users/Florian/Desktop/Web/project/project/js/Controller/AmbientLightController.js",
 		"/C/Users/Florian/Desktop/Web/project/project/.gitignore",
+		"/C/Users/Florian/Desktop/Web/project/project/Examples/SimplePhysics/SimplePhysics.js",
+		"/C/Users/Florian/Desktop/Web/project/project/Examples/SimplePhysics/terrain.json",
+		"/C/Users/Florian/Desktop/Web/project/project/Examples/SimpleRenderer/index.html",
+		"/C/Users/Florian/Desktop/Web/project/project/js/BasicBodies/Plane/Plane.js",
+		"/C/Users/Florian/Desktop/Web/project/project/js/Mesh3D/Mesh.js",
+		"/C/Users/Florian/Desktop/Web/project/project/Examples/SimpleRenderer.js",
+		"/C/Users/Florian/Desktop/Web/project/project/Examples/SimpleRenderer/SimpleRenderer.js",
+		"/C/Users/Florian/Desktop/Web/project/project/js/main.js",
+		"/C/Users/Florian/Desktop/Web/project/project/js/Math/Vector.js",
+		"/C/Users/Florian/Desktop/Web/project/project/index.html",
+		"/C/Users/Florian/Desktop/Web/project/project/Rex.json",
+		"/C/Users/Florian/Desktop/Web/project/project/js/Scene/Camera/Camera.js",
+		"/C/Users/Florian/Desktop/Web/project/project/Examples/index.html",
+		"/C/Users/Florian/Desktop/Web/project/project/js/Material/Material.js",
+		"/C/Users/Florian/Desktop/Web/project/project/skeleton.json",
+		"/C/Users/Florian/Desktop/Web/project/project/js/cannonTest.js",
 		"/C/Users/Florian/Desktop/Web/project/project/js/Texture/Texture.js",
 		"/C/Users/Florian/Desktop/Web/project/project/js/Controller/CameraController.js",
 		"/C/Users/Florian/Desktop/Web/project/project/vendor/cannon.js-dev/test/World.js",
 		"/C/Users/Florian/Desktop/Web/project/project/vendor/cannon.js-dev/build/cannon.min.js",
-		"/C/Users/Florian/Desktop/Web/project/project/js/Controller/AmbientLightController.js",
 		"/C/Users/Florian/Desktop/Web/project/project/Rex_skeleton.json",
-		"/C/Users/Florian/Desktop/Web/project/project/js/Scene/Light/AmbientLight.js",
-		"/C/Users/Florian/Desktop/Web/project/project/js/Material/Material.js",
-		"/C/Users/Florian/Desktop/Web/project/project/js/Mesh3D/Mesh.js",
 		"/C/Users/Florian/Desktop/Web/project/project/js/GraphicsData/VertexArrayObject.js",
 		"/C/Users/Florian/Desktop/Web/project/project/js/GraphicsData/VertexDataManager.js",
 		"/C/Users/Florian/Desktop/Web/project/project/js/Scene/Light/DirectionalLight.js",
-		"/C/Users/Florian/Desktop/Web/project/project/skeleton.json",
 		"/C/Users/Florian/AppData/Local/Temp/fz3temp-2/index 3.php",
 		"/C/Users/Florian/AppData/Local/Temp/fz3temp-2/index.html",
 		"/C/Users/Florian/AppData/Local/Temp/fz3temp-2/index 2.php",
 		"/C/Users/Florian/AppData/Local/Temp/fz3temp-2/index.php",
 		"/C/Users/Florian/Desktop/Web/project/project/js/Scene/Loader/MeshLoader.js",
-		"/C/Users/Florian/Desktop/Web/project/project/Rex.json",
 		"/C/Users/Florian/Desktop/Web/project/project/Rex_buffergeometry.json",
 		"/C/Users/Florian/Desktop/Web/project/project/ShackBlendswap.json",
 		"/C/Users/Florian/Desktop/Web/project/project/vendor/glmatrix/src/gl-matrix/vec3.js",
-		"/C/Users/Florian/Desktop/Web/project/project/js/Scene/Camera/Camera.js",
 		"/C/Users/Florian/Desktop/Web/project/project/js/Camera/Camera.js",
 		"/C/Users/Florian/Desktop/Web/project/project/js/Buffer/Buffer.js",
 		"/C/Users/Florian/Desktop/Web/project/project/vendor/glmatrix/src/gl-matrix/mat4.js",
 		"/C/Users/Florian/Desktop/Web/project/project/vendor/toji-gl-matrix-v2.4.0-20-gc67df41/toji-gl-matrix-c67df41/src/gl-matrix.js",
 		"/C/Users/Florian/Desktop/Web/project/project/js/webgl.js",
-		"/C/Users/Florian/Desktop/Web/project/project/js/Math/Vector.js",
 		"/C/Users/Florian/AppData/Roaming/Sublime Text 3/Packages/Javascript Beautify/JavascriptBeautify.sublime-settings",
 		"/C/Users/Florian/AppData/Roaming/Sublime Text 3/Packages/JsFormat/JsFormat.sublime-settings",
 		"/C/Users/Florian/Desktop/Web/florian/index.html",
@@ -378,86 +357,24 @@
 	"groups":
 	[
 		{
-			"selected": 8,
+			"selected": 7,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "index.html",
+					"file": "js/BasicBodies/Box/Box.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 6961,
+						"buffer_size": 1191,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								4683,
-								4683
-							]
-						],
-						"settings":
-						{
-							"glslvalidator_configured": true,
-							"glslvalidator_enabled": 1,
-							"syntax": "Packages/HTML/HTML.sublime-syntax",
-							"translate_tabs_to_spaces": false,
-							"word_wrap": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 2967.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "js/Controller/AmbientLightController.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1264,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								531,
-								531
-							]
-						],
-						"settings":
-						{
-							"glslvalidator_configured": true,
-							"glslvalidator_enabled": 1,
-							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 8,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "js/Controller/DirectionalLightController.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1435,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								544,
-								544
+								997,
+								997
 							]
 						],
 						"settings":
@@ -471,46 +388,78 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 9,
+					"stack_index": 7,
 					"type": "text"
 				},
 				{
-					"buffer": 3,
-					"file": "js/Scene/Light/AmbientLight.js",
+					"buffer": 1,
+					"file": "Examples/SimplePhysics/SimplePhysics.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 115,
+						"buffer_size": 3661,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								115,
-								115
+								2574,
+								2574
 							]
 						],
 						"settings":
 						{
 							"glslvalidator_configured": true,
 							"glslvalidator_enabled": 1,
-							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax"
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1035.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "Examples/SimpleRenderer/terrain.json",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1385652,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								10,
+								10
+							]
+						],
+						"settings":
+						{
+							"glslvalidator_configured": true,
+							"glslvalidator_enabled": 1,
+							"syntax": "Packages/JavaScript/JSON.sublime-syntax"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 7,
+					"stack_index": 3,
 					"type": "text"
 				},
 				{
-					"buffer": 4,
-					"file": "skeleton.json",
+					"buffer": 3,
+					"file": "js/Mesh3D/Mesh.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 628273,
+						"buffer_size": 3102,
 						"regions":
 						{
 						},
@@ -525,38 +474,6 @@
 						{
 							"glslvalidator_configured": true,
 							"glslvalidator_enabled": 1,
-							"syntax": "Packages/JavaScript/JSON.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 2042.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 5,
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "js/Math/Vector.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1,
-								1
-							]
-						],
-						"settings":
-						{
-							"glslvalidator_configured": true,
-							"glslvalidator_enabled": 1,
 							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
 							"translate_tabs_to_spaces": false
 						},
@@ -564,24 +481,147 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 12,
+					"stack_index": 4,
 					"type": "text"
 				},
 				{
-					"buffer": 6,
-					"file": "js/main.js",
+					"buffer": 4,
+					"file": "Examples/SimplePhysics/sphere.json",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 4017,
+						"buffer_size": 182883,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								3505,
-								3505
+								13,
+								13
+							]
+						],
+						"settings":
+						{
+							"glslvalidator_configured": true,
+							"glslvalidator_enabled": 1,
+							"syntax": "Packages/JavaScript/JSON.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 8,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "js/BasicBodies/Plane/Plane.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 598,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								312,
+								312
+							]
+						],
+						"settings":
+						{
+							"glslvalidator_configured": true,
+							"glslvalidator_enabled": 1,
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "Examples/SimpleRenderer/index.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 6895,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								4977,
+								4977
+							]
+						],
+						"settings":
+						{
+							"glslvalidator_configured": true,
+							"glslvalidator_enabled": 1,
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 2967.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "Examples/SimpleRenderer/asteroid.json",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 5964263,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								10,
+								10
+							]
+						],
+						"settings":
+						{
+							"glslvalidator_configured": true,
+							"glslvalidator_enabled": 1,
+							"syntax": "Packages/JavaScript/JSON.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "Examples/SimpleRenderer/SimpleRenderer.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2742,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								909,
+								909
 							]
 						],
 						"settings":
@@ -593,192 +633,10 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 759.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 7,
-					"file": ".gitignore",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 47,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								47,
-								47
-							]
-						],
-						"settings":
-						{
-							"glslvalidator_configured": true,
-							"glslvalidator_enabled": 1,
-							"syntax": "Packages/Text/Plain text.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 6,
-					"type": "text"
-				},
-				{
-					"buffer": 8,
-					"file": "js/BasicBodies/Box/Box.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 565,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								560,
-								560
-							]
-						],
-						"settings":
-						{
-							"glslvalidator_configured": true,
-							"glslvalidator_enabled": 1,
-							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 9,
-					"file": "js/Mesh3D/Mesh.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 3102,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								2978,
-								2995
-							]
-						],
-						"settings":
-						{
-							"glslvalidator_configured": true,
-							"glslvalidator_enabled": 1,
-							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 1587.0,
+						"translation.y": 483.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 10,
-					"file": "js/BasicBodies/Plane/Plane.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 16,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								12,
-								12
-							]
-						],
-						"settings":
-						{
-							"glslvalidator_configured": true,
-							"glslvalidator_enabled": 1,
-							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 4,
-					"type": "text"
-				},
-				{
-					"buffer": 11,
-					"file": "js/Scene/Camera/Camera.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2246,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1050,
-								1068
-							]
-						],
-						"settings":
-						{
-							"glslvalidator_configured": true,
-							"glslvalidator_enabled": 1,
-							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 11,
-					"type": "text"
-				},
-				{
-					"buffer": 12,
-					"file": "js/UI/Slider.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 219,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								97,
-								97
-							]
-						],
-						"settings":
-						{
-							"glslvalidator_configured": true,
-							"glslvalidator_enabled": 1,
-							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 10,
 					"type": "text"
 				}
 			]

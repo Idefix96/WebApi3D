@@ -125,7 +125,7 @@
 				Bitangent_FS = gScaling*gRotation*gTranslation*vec4(Bitangent.x, Bitangent.y, Bitangent.z, 0.0);
 				NormalTF = 	gScaling*gRotation*gTranslation*vec4(Normal.x, Normal.y, Normal.z, 0.0);
 			  	Color_FS = Color;
-			    gl_Position = gPerspective*gWorldToCamera*gScaling*gRotation*gTranslation*vec4(Position, 1.0);
+			    gl_Position = gPerspective*gWorldToCamera*gRotation*gTranslation*gScaling*vec4(Position, 1.0);
 		  }
 		</script>
 		<script src="../../js/Texture/Texture.js"></script>
@@ -147,6 +147,9 @@
 		<script src="../../js/Controller/AmbientLightController.js"></script>
 		<script src="../../js/Controller/DirectionalLightController.js"></script>	
 		<script src="../../js/BasicBodies/Box/Box.js"></script>
+		<script src="../../js/BasicBodies/Plane/Plane.js"></script>
+		<script src="terrain.json"></script>
+		<script src="sphere.json"></script>
 
 		<script src="../../vendor/cannon.js-master/build/cannon.js"></script>
 		

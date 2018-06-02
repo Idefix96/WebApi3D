@@ -8,7 +8,7 @@ class Camera
 		this.zNear = 0.001;
 		this.zFar = 1000.0;
 		this.perspectiveMatrix = mat4.perspective(mat4.create(), this.fovy, this.aspect, this.zNear, this.zFar);
-		this.position = vec3.fromValues(0.0, 0.0, 1.0);
+		this.position = vec3.fromValues(0.0, 0.0, 4.0);
 		this.center = vec3.fromValues(0.0, 0.0, 0.0);
 		this.lookDir = vec3.sub(vec3.create(),this.center,this.position);
 		this.forward = this.lookDir;

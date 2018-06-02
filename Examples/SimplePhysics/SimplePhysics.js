@@ -47,30 +47,28 @@
   ambientLightController.update();
   directionalLightController.update();
 
-  var box = new Box(1,1,1);
-
+  var mesh = new Mesh();
+  var ground = new Mesh();
+  ground.setPositionData(terrain.geometries[0].data.attributes.position.array);
+   ground.setNormalData(terrain.geometries[0].data.attributes.normal.array);
+   ground.setIndexData(terrain.geometries[0].data.index.array);
+   mesh.setPositionData(sphere.geometries[0].data.attributes.position.array);
+   mesh.setNormalData(sphere.geometries[0].data.attributes.normal.array);
+   mesh.setIndexData(sphere.geometries[0].data.index.array);
+   //mesh.scale(vec3.fromValues(0.5,0.5,0.5));
 var world = new CANNON.World();
 world.gravity.set(0.0,-9.82,0.0);
 
 world.broadphase = new CANNON.NaiveBroadphase();
 
-var mass = 5, radius = 1;
+var mass = 1, radius = 0.25;
 var sphereShape = new CANNON.Sphere(radius); // Step 1
 var sphereBody = new CANNON.Body({mass: mass, shape: sphereShape}); // Step 2
-sphereBody.position.set(0,15,-5);
+sphereBody.position.set(0,15,0);
 world.add(sphereBody); // Step 3
 
- var vertices = [
-            10, 0, 10, // vertex 0
-            10, 0, -10, // vertex 1
-            -10, 0, -10,  // vertex 2
-             -10, 0, 10  // vertex 3
-        ];
-        var indices = [
-            0, 1, 2,  // triangle 0
-             2, 3, 0,  // triangle 0
-        ];
-        var trimeshShape = new CANNON.Trimesh(vertices, indices);
+ 
+        var trimeshShape = new CANNON.Trimesh(ground.positionData, ground.indexData);
         var trimeshBody = new CANNON.Body({ mass: 0, shape: trimeshShape });
         world.add(trimeshBody);
 
@@ -80,7 +78,8 @@ function MainPhysicsSimulation()
 {
 
   world.step(timeStep);
-  box.translate(vec3.fromValues(sphereBody.position.x, sphereBody.position.y, sphereBody.position.z));
+  mesh.translate(vec3.fromValues(sphereBody.position.x, sphereBody.position.y, sphereBody.position.z));
+  ground.translate(vec3.fromValues(trimeshBody.position.x, trimeshBody.position.y, trimeshBody.position.z));
    gl.clearColor(0.3, 0.3, 0.3, 1.0);
     gl.clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT);
 
@@ -93,7 +92,8 @@ function MainPhysicsSimulation()
     ambientLightController.update();
     directionalLightController.update();
   
-    box.draw(shaderProgram.id);
+    mesh.draw(shaderProgram.id);
+    ground.draw(shaderProgram.id);
   requestAnimationFrame(MainPhysicsSimulation);
  
 }
