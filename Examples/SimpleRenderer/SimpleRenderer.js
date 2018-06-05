@@ -44,7 +44,17 @@
   var inputDirectionalX = new InputField("directionalDirectionX");
   var inputDirectionalY = new InputField("directionalDirectionY");
   var inputDirectionalZ = new InputField("directionalDirectionZ");
-  cameraController = new CameraController(camera, shaderProgram.id);
+  var cameraFov = new  InputField("fovy");
+  var cameraAspectWidth = new InputField("aspectWidth");
+  var cameraAspectHeight = new InputField("aspectHeight");
+  var cameraPositionX = new InputField("cameraPositionX");
+  var cameraPositionY = new InputField("cameraPositionY");
+  var cameraPositionZ = new InputField("cameraPositionZ");
+  var cameraCenterX = new InputField("cameraCenterX");
+  var cameraCenterY = new InputField("cameraCenterY");
+  var cameraCenterZ = new InputField("cameraCenterZ");
+  cameraController = new CameraController(camera, shaderProgram.id, cameraFov, cameraAspectWidth, cameraAspectHeight, null, null,
+    cameraPositionX, cameraPositionY, cameraPositionZ, cameraCenterX, cameraCenterY, cameraCenterZ);
   directionalLightController = new DirectionalLightController(directional, shaderProgram.id, sliderDirectionalIntensity, 
     sliderDirectionalColorR, sliderDirectionalColorG, sliderDirectionalColorB, document.getElementById("directionalIntensityOut"),
     document.getElementById("directionalIntensityRed"), document.getElementById("directionalIntensityGreen"), document.getElementById("directionalIntensityBlue"),
@@ -53,6 +63,7 @@
   ambientLightController = new AmbientLightController(ambient, shaderProgram.id, sliderAmbientIntensity, 
     sliderAmbientColorR, sliderAmbientColorG, sliderAmbientColorB, document.getElementById("ambientIntensityOut"),
     document.getElementById("ambientIntensityRed"), document.getElementById("ambientIntensityGreen"), document.getElementById("ambientIntensityBlue"));
+  
   var active = false;
   canvas.addEventListener("mouseover", function(){
     active = true;  

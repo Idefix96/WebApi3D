@@ -3,21 +3,7 @@
 	<head>
 		<meta charset=utf-8>
 		<title>Simple Renderer</title>
-		<style>
-			#test
-			{
-			  top: 5px;
-			  left: 5px;
-			  position: absolute;
-			 
-			}
-
-			#canvas
-			{
-				width: 100%;
-				height: 100%;
-			}
-		</style>
+		<link rel="stylesheet" type="text/css" href="css/style.css">
 
 		<script id="shader-fs" type="x-shader/x-fragment">
   			precision mediump float;
@@ -151,7 +137,7 @@
 	<body>
 		<canvas id="canvas" width="1920" height="1080" style="width: 1920px; height: 540px;">		
 		</canvas>
-		<div id="lights">
+		<div class="controls">
 			<div id="ambientLight">	
 				<table>
 				<caption>Ambient Light</caption>
@@ -220,11 +206,50 @@
 				</table>
 			</div>
 		</div>	
-		<div id="camera">
+		<div id="camera" class="controls">
 			<table>
 				<caption>Camera</caption>
 				<tr>
-					<td></td>
+					<td><label for="fovy">Field of View</label></td>
+					<td><input type="number" step="0.01"  min="0" max="3.14" id="fovy" value = "1.0"/></td>
+				</tr>
+				<tr>
+					<td><label for="aspectWidth">Aspect Ratio</label></td>
+					<td><input type="number" step="1"  value="1920.0" min="800.0"  id="aspectWidth" /></td>
+					<td> / </td>
+					<td><input type="number" step="1"  value="1080.0" min="800.0"  id="aspectHeight" /></td>
+				</tr>
+				<tr>
+					<td><label for="zNear">Z Near</label></td>
+					<td><input type="number" step="0.01"  min="0"  id="zNear" value="0.01"/></td>
+				</tr>
+				<tr>
+					<td><label for="zFar">Z Far</label></td>
+					<td><input type="number" step="0.01"  min="0"  id="zFar" value="1000"/></td>
+				</tr>
+				<tr>
+					<td><label for="cameraPositionX">Position X</label></td>
+					<td><input type="number" step="0.01"  id="cameraPositionX" value="0"/></td>
+				</tr>
+				<tr>
+					<td><label for="cameraPositionY">Position Y</label></td>
+					<td><input type="number" step="0.01"  id="cameraPositionY" value="0"/></td>
+				</tr>
+				<tr>
+					<td><label for="cameraPositionZ">Position Z</label></td>
+					<td><input type="number" step="0.01"  id="cameraPositionZ" value="0"/></td>
+				</tr>
+				<tr>
+					<td><label for="cameraCenterX">Center X</label></td>
+					<td><input type="number" step="0.01"  id="cameraCenterX" value="0"/></td>
+				</tr>
+				<tr>
+					<td><label for="cameraCenterY">Center Y</label></td>
+					<td><input type="number" step="0.01"  id="cameraCenterY" value="0"/></td>
+				</tr>
+				<tr>
+					<td><label for="cameraCenterZ">Center Z</label></td>
+					<td><input type="number" step="0.01"  id="cameraCenterZ" value="-1"/></td>
 				</tr>
 			</table>
 		</div>

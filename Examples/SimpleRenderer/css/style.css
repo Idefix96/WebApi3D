@@ -1,0 +1,9 @@
+.controls {
+	float: left;
+	background-color: #99999999;
+	border: 2px solid black;
+}
+
+#camera {
+	margin-left: 15px;
+}
