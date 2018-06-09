@@ -148,19 +148,28 @@
 	"buffers":
 	[
 		{
-			"file": "Examples/SimpleRenderer/index.html",
+			"file": "js/Controller/DirectionalLightController.js",
 			"settings":
 			{
-				"buffer_size": 9692,
+				"buffer_size": 2535,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "js/Controller/DirectionalLightController.js",
+			"file": "Examples/SimpleRenderer/index.html",
 			"settings":
 			{
-				"buffer_size": 2535,
+				"buffer_size": 9759,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "Examples/SimpleRenderer/css/style.css",
+			"settings":
+			{
+				"buffer_size": 117,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -196,6 +205,15 @@
 			"settings":
 			{
 				"buffer_size": 4011,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "Examples/SimpleRenderer/asteroid.js",
+			"settings":
+			{
+				"buffer_size": 5964268,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -262,6 +280,9 @@
 	],
 	"file_history":
 	[
+		"/C/Users/Florian/Desktop/Web/project/project/Examples/SimpleRenderer/index.html",
+		"/C/Users/Florian/AppData/Local/Temp/fz3temp-2/index 2.html",
+		"/C/Users/Florian/AppData/Local/Temp/fz3temp-2/index.html",
 		"/C/Users/Florian/Desktop/Web/project/project/js/UI/Slider.js",
 		"/C/Users/Florian/Desktop/Web/project/project/Examples/SimpleRenderer/css/style.css",
 		"/C/Users/Florian/Desktop/Web/project/project/js/Controller/AmbientLightController.js",
@@ -271,7 +292,6 @@
 		"/C/Users/Florian/Desktop/Web/project/project/Examples/SimpleRenderer/SimpleRenderer.js",
 		"/C/Users/Florian/Desktop/Web/project/project/Examples/SimpleRenderer/asteroid.json",
 		"/C/Users/Florian/Desktop/Web/project/project/js/Scene/Camera/Camera.js",
-		"/C/Users/Florian/Desktop/Web/project/project/Examples/SimpleRenderer/index.html",
 		"/C/Users/Florian/Desktop/Web/project/project/js/BasicBodies/Plane/Plane.js",
 		"/C/Users/Florian/Desktop/Web/project/project/Examples/SimplePhysics/sphere.json",
 		"/C/Users/Florian/Desktop/Web/project/project/js/Mesh3D/Mesh.js",
@@ -302,7 +322,6 @@
 		"/C/Users/Florian/Desktop/Web/project/project/js/GraphicsData/VertexDataManager.js",
 		"/C/Users/Florian/Desktop/Web/project/project/js/Scene/Light/DirectionalLight.js",
 		"/C/Users/Florian/AppData/Local/Temp/fz3temp-2/index 3.php",
-		"/C/Users/Florian/AppData/Local/Temp/fz3temp-2/index.html",
 		"/C/Users/Florian/AppData/Local/Temp/fz3temp-2/index 2.php",
 		"/C/Users/Florian/AppData/Local/Temp/fz3temp-2/index.php",
 		"/C/Users/Florian/Desktop/Web/project/project/js/Scene/Loader/MeshLoader.js",
@@ -378,42 +397,11 @@
 	"groups":
 	[
 		{
-			"selected": 3,
+			"selected": 1,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "Examples/SimpleRenderer/index.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 9692,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								9253,
-								9266
-							]
-						],
-						"settings":
-						{
-							"glslvalidator_configured": true,
-							"glslvalidator_enabled": 1,
-							"syntax": "Packages/HTML/HTML.sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 5152.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
 					"file": "js/Controller/DirectionalLightController.js",
 					"semi_transient": false,
 					"settings":
@@ -440,11 +428,72 @@
 						"translation.y": 345.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 5,
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "Examples/SimpleRenderer/index.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 9759,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								5125,
+								5125
+							]
+						],
+						"settings":
+						{
+							"glslvalidator_configured": true,
+							"glslvalidator_enabled": 1,
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 2922.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
 					"type": "text"
 				},
 				{
 					"buffer": 2,
+					"file": "Examples/SimpleRenderer/css/style.css",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 117,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								96,
+								96
+							]
+						],
+						"settings":
+						{
+							"glslvalidator_configured": true,
+							"glslvalidator_enabled": 1,
+							"syntax": "Packages/CSS/CSS.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
 					"file": "js/Scene/Camera/Camera.js",
 					"semi_transient": false,
 					"settings":
@@ -471,11 +520,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 3,
+					"stack_index": 6,
 					"type": "text"
 				},
 				{
-					"buffer": 3,
+					"buffer": 4,
 					"file": "js/Controller/CameraController.js",
 					"semi_transient": false,
 					"settings":
@@ -487,8 +536,8 @@
 						"selection":
 						[
 							[
-								4133,
-								4133
+								4264,
+								4264
 							]
 						],
 						"settings":
@@ -502,11 +551,11 @@
 						"translation.y": 1681.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 5,
 					"type": "text"
 				},
 				{
-					"buffer": 4,
+					"buffer": 5,
 					"file": "js/UI/InputField.js",
 					"semi_transient": false,
 					"settings":
@@ -532,11 +581,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 4,
+					"stack_index": 7,
 					"type": "text"
 				},
 				{
-					"buffer": 5,
+					"buffer": 6,
 					"file": "Examples/SimpleRenderer/SimpleRenderer.js",
 					"semi_transient": false,
 					"settings":
@@ -561,10 +610,40 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 15.0,
-						"translation.y": 690.0,
+						"translation.y": 69.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "Examples/SimpleRenderer/asteroid.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 5964268,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								4115528,
+								4115528
+							]
+						],
+						"settings":
+						{
+							"glslvalidator_configured": true,
+							"glslvalidator_enabled": 1,
+							"syntax": "Packages/JavaScript/JSON.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
 					"type": "text"
 				}
 			]
@@ -613,7 +692,7 @@
 	"project": "web.sublime-project",
 	"replace":
 	{
-		"height": 80.0
+		"height": 58.0
 	},
 	"save_all_on_build": true,
 	"select_file":

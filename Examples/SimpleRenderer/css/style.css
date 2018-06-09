@@ -2,8 +2,9 @@
 	float: left;
 	background-color: #99999999;
 	border: 2px solid black;
+	margin-left: 5px;
 }
 
 #camera {
-	margin-left: 15px;
+	
 }
