@@ -1,5 +1,5 @@
 class Plane extends Mesh{
-	constructor(width, depth)
+	constructor(width = 1.0, depth = 1.0)
 	{
 		super();
 		

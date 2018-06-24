@@ -125,7 +125,7 @@
 				Bitangent_FS = gScaling*gRotation*gTranslation*vec4(Bitangent.x, Bitangent.y, Bitangent.z, 0.0);
 				NormalTF = 	gScaling*gRotation*gTranslation*vec4(Normal.x, Normal.y, Normal.z, 0.0);
 			  	Color_FS = Color;
-			    gl_Position = gPerspective*gWorldToCamera*gRotation*gTranslation*gScaling*vec4(Position, 1.0);
+			    gl_Position = gPerspective*gWorldToCamera*gTranslation*gRotation*gScaling*vec4(Position, 1.0);
 		  }
 		</script>
 		<script src="../../js/Texture/Texture.js"></script>
